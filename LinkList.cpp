@@ -94,5 +94,18 @@ class list{
 };
 
 int main(){
-
+    list mhs;
+    int nim;
+    char ch;
+    while(1){
+        cout << "Menu" << endl;
+        cout << endl;
+        cout << "1. Menambahkan data ke dalam list" << endl;
+        cout << "2. Menaghapus data kdi dalam list" << endl;
+        cout << "3. Menampilkan semua data di dalam list" << endl;
+        cout << "4. Mencari data dalam list" << endl;
+        cout << "5. Keluar" << endl;
+        cout << "Masukkan Pilihan (1 - 5) : " << endl;
+        cin >> ch;
+    }
 }
