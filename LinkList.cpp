@@ -137,6 +137,26 @@ int main(){
                 mhs.traverse();
             }
             break;
+            case '4' :{
+                if(mhs.listEmpty() == true){
+                    cout << "\nList Kosong.\n";
+                    break;
+                }
+                Node *previous, * current;
+                cout << endl
+                    << "Masukkan No Mahasiswa Yang Dicari : ";
+                cin >> nim;
+                if (mhs.Search(nim, &previous, &current) == false){
+                    cout << endl
+                        << "Data Tidak Ditemukan" << endl;
+                }
+                else{
+                    cout << endl
+                        << "Data Ditemukan" << endl;
+                        cout << "\nNo Mahasiswa : " << current->noMhs << endl;
+                        cout << "\n";
+                }
+            }
         }        
     } while(ch !=5)
 }
