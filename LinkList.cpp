@@ -157,6 +157,14 @@ int main(){
                         cout << "\n";
                 }
             }
+            break;
+            case '5' : {
+            }
+            break;
+            default: {
+                cout << "Pilihan Salah !." << endl;
+            }
+            break;
         }        
-    } while(ch !=5)
+    } while(ch !=5);
 }
