@@ -54,7 +54,7 @@ class list{
         return (START == NULL);
     }
 
-    bool search (int nim, Node **previous, Node **current){
+    bool Search (int nim, Node **previous, Node **current){
         *previous = START;
         *current = START;
 
@@ -62,6 +62,23 @@ class list{
             *previous = *current;
             *current = (*current)->next;
         }
+
+        return (*current != NULL);
+    }
+
+    bool delNode (int nim){
+        Node *current, *previous;
+        if (!Search(nim, &previous, &current))
+            return false;
+
+        if (current == START)
+            START =START->next;        
+        else
+            previous->next = current->next;
+    }
+
+    void traverse(){
+
     }
 };
 
