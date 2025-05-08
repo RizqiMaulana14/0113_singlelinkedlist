@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 using namespace std;
 
 class Node{
@@ -21,17 +22,29 @@ class list{
         cin >> nim;
 
         Node *nodeBaru = new Node;
-        nodeBaru -> noMhs = nim;
+        nodeBaru->noMhs = nim;
 
-        if (START == NULL || nim <= START -> noMhs){
-            if ((START != NULL) && nim == START -> noMhs){
+        if (START == NULL || nim <= START->noMhs){
+            if ((START != NULL) && nim == START->noMhs){
                 cout << "\nDuplikasi noMhs tidak diijinkan.\n";
                 return;
             }
-            nodeBaru -> next = START;
+            nodeBaru->next = START;
             START = nodeBaru;
             return;
         }
+
+        while ((current != NULL) && (nim >= current->noMhs)){
+            if( nim == current-noMhs){
+                cout << "\nDuplikasi noMhs tidak diijinkan.\n";
+                return;
+            }
+            previous = current;
+            current = current->next;
+        }
+
+        nodeBaru->next = current;
+        previous->next = nodeBaru;
     }
 };
 
