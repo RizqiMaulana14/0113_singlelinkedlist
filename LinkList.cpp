@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class node{
+class Node{
     public:
     int noMhs;
     Node *next;
@@ -15,6 +15,11 @@ class list{
         START = NULL;
     }
 
+    void addNode(){
+        int nim;
+        cout << "\nMasukkan Nomor Mahasiswa : ";
+        cin >> nim;
+    }
 };
 
 int main(){
