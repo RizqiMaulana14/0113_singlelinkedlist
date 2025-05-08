@@ -97,7 +97,7 @@ int main(){
     list mhs;
     int nim;
     char ch;
-    while(1){
+    do{
         cout << "Menu" << endl;
         cout << endl;
         cout << "1. Menambahkan data ke dalam list" << endl;
@@ -113,6 +113,26 @@ int main(){
                 mhs.addNode();
                 break;
             }
+
+            case '2' :{
+                if(mhs.listEmpty()){
+                    cout << endl
+                        << "List Kosong" << endl;
+                    break;
+                }
+                cout << endl
+                    << "\nMasukkan no mahasiswa yang akan dihapus : ";
+                cin >> nim;
+                if(mhs.delNode(nim) == false){
+                    cout << endl
+                        << "Data Tidak Ditemukan" << endl;
+                }
+                else{
+                    cout << endl
+                        << "Data Dengan Nomor Mahasiswa " << nim << "Berhasil Dihapus " << endl;
+                }
+            }
+            break;            
         }        
-    }
+    } while(ch !=5)
 }
