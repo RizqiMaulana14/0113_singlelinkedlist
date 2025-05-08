@@ -7,6 +7,16 @@ class node{
     Node *next;
 };
 
+class list{
+    Node *START;
+    
+    public:
+    list(){
+        START = NULL;
+    }
+
+};
+
 int main(){
 
 }
